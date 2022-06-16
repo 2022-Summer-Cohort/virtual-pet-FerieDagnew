@@ -13,6 +13,14 @@ class VirtualPetShelterTest {
       underTest.feedAll();
       assertEquals(5, underTest.getPet(0). getHungerLevel());
 }
+@Test
+ void shouldMaintainRobotic() {
+    VirtualPetShelter underTest = new VirtualPetShelter();
+    underTest.MaintainRoboticAll();
+    assertEquals(5, ((RoboticPet)underTest.getPet(0)). getMaintenanceLevel());
+
+
+}
 
 @Test
   void ShouldWaterAllTest() {
@@ -34,7 +42,12 @@ public void HungerThirstBoredomLevelShouldIncreaseWithTick() {
     underTest.playAll();
     assertEquals(5, underTest.getPet(0).getBoredomLevel());
  }
-
+@Test
+    public void shouldOilAll() {
+    VirtualPetShelter underTest = new VirtualPetShelter();
+    underTest.OilAll();
+    assertEquals(5,((RoboticPet) underTest.getPet(0)).OilLevel());
+}
 }
 
 

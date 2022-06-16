@@ -1,14 +1,15 @@
 package virtual_pet;
 
-public class VirtualPet {
+public abstract class VirtualPet {
 
-    private String name;
+    protected String name;
 
-    private int hungerLevel;
+    protected int hungerLevel;
 
-    private int boredomLevel;
+    protected int boredomLevel;
 
-    private int thirstLevel;
+    protected int thirstLevel;
+
 
     public VirtualPet (String name, int hungerLevel, int boredomLevel, int thirstLevel) {
         this.name = name;
@@ -59,12 +60,11 @@ public class VirtualPet {
 
 
     }
+       public abstract void greeting();
+
+       }
 
 
-
-
-
-    }
 
 
 
